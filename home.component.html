@@ -1,0 +1,12 @@
+<div class="container">
+
+    <h1 class="fw-bold my-3">&lt;/Inicio></h1>
+
+    <entradas-list
+        [identify]="idetify"
+        [posts]="posts"
+        [postImageUrl]="postImageUrl"
+        [userImageUrl]="userImageUrl"
+        (delete) = 'onDelete($event)'
+        ></entradas-list>
+</div>

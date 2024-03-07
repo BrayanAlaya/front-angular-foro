@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.img-mask-user-small{
+    height: 37px;
+    width: 37px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.mask-user-ajustes{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+}

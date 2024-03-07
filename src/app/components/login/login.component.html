@@ -1,0 +1,18 @@
+<div class="container mt-3">
+    <h1 class="fw-bold text-center">Log In</h1>
+
+    <p *ngIf="status == false" class="bg-danger-subtle h-5 p-3">Hubo un error al iniciar sesion la cuenta verifica tus datos o vuelve mas tarde. <a class="link-underline-light" [routerLink]="['/']">Volver al inicio</a></p>
+
+    <form class="col-11 col-lg-8 col-xxl-4 mx-auto" (ngSubmit)="onSubmit()" [formGroup]="userForm" >
+        <fieldset class="my-2 col p-0 form-group">
+            <label class="form-label" for="email">Correo electronico</label>
+            <input class="form-control border border-2 rounded-2 border-black" type="text" #email formControlName="email">
+        </fieldset>
+        <fieldset class="my-2 p-0 form-group">
+            <label class="form-label" for="password">Contraseña</label>
+            <input type="password" class="form-control border border-2 rounded-2 border-black" #password formControlName="password">
+        </fieldset>
+        <button class="btn btn-primary col-12 mt-3">Ingresar</button>
+    </form>
+
+</div>

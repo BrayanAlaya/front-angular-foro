@@ -1,0 +1,45 @@
+<div class="container mt-3">
+    <h1 class="fw-bold text-center">Ajustes de Usuario</h1>
+
+    <p *ngIf="status == true" class="bg-success-subtle h-5 p-3">Informacion actualizada correctamente</p>
+    <p *ngIf="status == false" class="bg-danger-subtle h-5 p-3">La informacion no se pudo actualizar</p>
+
+    <form class="mt-3 row" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="row row-cols-1 row-cols-md-2 mx-auto">
+
+            <div class="col">
+                <fieldset class="p-0 m-0 my-4 form-group">
+                    <label class="my-2 form-label" for="name">Nombre: </label>
+                    <input type="text" class="form-control border border-2 border-black rounded-2" id="name"
+                        formControlName="name">
+                </fieldset>
+                <fieldset class="p-0 m-0 my-4 form-group">
+                    <label class="my-2 form-label" for="surname">Apellido: </label>
+                    <input type="text" class="form-control border border-2 border-black rounded-2" id="surname"
+                        formControlName="surname">
+                </fieldset>
+                <fieldset class="p-0 m-0 my-4 form-group">
+                    <label class="my-2 form-label">Email: </label>
+                    <input type="text" readonly formControlName="email" class="form-control-plaintext">
+                </fieldset>
+                <fieldset class="p-0 m-0 my-4 form-group">
+                    <label class="my-2 form-label">Password: </label>
+                    <input type="text" readonly [value]="passwordValue" class="form-control-plaintext">
+                </fieldset>
+            </div>
+
+            <div class="col">
+                <fieldset class="p-0 m-0 my-3 d-flex flex-column">
+                    <label for="image">Imagen: </label>
+                    <img class="mask-user-ajustes img-thumbnail" [src]="srcImage" alt="">
+                    <div class="my-3 row">
+                        <label for="formFile" class="form-label">Ingresa una foto:</label>
+                        <input style="display: none;" class="form-control" #imageUserUploader type="file" (change)="uploadimage($event)">
+                        <button class="btn btn-primary " type="button" (click)="imageUserUploader.click()">Sube una imagen</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-auto my-5 mx-auto py-2 px-5">Actualizar</button>
+    </form>
+</div>

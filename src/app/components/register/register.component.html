@@ -1,0 +1,33 @@
+<div class="container mt-3">
+
+    <h1 class="fw-bold text-center">Registrate</h1>
+
+    <p *ngIf="status == true" class="bg-success-subtle h-5 p-3">Tu cuenta se ha registrado correctamente. <a class="link-underline-light" [routerLink]="['/login']">Iniciar Sesion</a></p>
+    <p *ngIf="status == false" class="bg-danger-subtle h-5 p-3">Hubo un error al registrar la cuenta vuelve a intentar o vuelve mas tarde. <a class="link-underline-light" [routerLink]="['/']">Volver al inicio</a></p>
+
+    <form class="col-11 col-md-8 col-lg-4 mx-auto" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <fieldset class="form-group p-0 my-3">
+            <label class="form-label" for="name">Nombre:</label>
+            <input formControlName="name" class="form-control border border-2 rounded-2 border-black" name="name" type="text">
+        </fieldset>
+        
+        <fieldset class="form-group p-0 my-3">
+            <label class="form-label" for="surname">Apellidos:</label>
+            <input formControlName="surname" class="form-control border border-2 rounded-2 border-black" name="surname" type="text">
+        </fieldset>
+
+        <fieldset class="form-group p-0 my-3">
+            <label class="form-label" for="email">Email:</label>
+            <input formControlName="email" class="form-control border border-2 rounded-2 border-black" name="email" type="text">
+        </fieldset>
+
+        <fieldset class="form-group p-0 my-3">
+            <label class="form-label" for="password">Contraseña:</label>
+            <input formControlName="password" class="form-control border border-2 rounded-2 border-black" name="password" type="password">
+        </fieldset>
+
+        <button class="btn btn-primary col-12 mt-3">Regitrar</button>
+    </form>
+
+</div>
