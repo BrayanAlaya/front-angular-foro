@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
     <div class="container-fluid mx-5">
-        <a class="navbar-brand" href="#">Ng-Foro</a>
+        <a class="navbar-brand" [routerLink]="['/']">Ng-Foro</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,11 +13,10 @@
                     <a class="nav-link active" aria-current="page" [routerLink]="['/']">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Ver Temas</a>
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/temas']">Ver Temas</a>
                 </li>
-
                 <li *ngIf="user" class="nav-item">
-                    <a class="nav-link" href="#">Crear Temas</a>
+                    <a class="nav-link" [routerLink]="['/panel/add']">Crear Temas</a>
                 </li>
                 
             </ul>
@@ -44,8 +43,8 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" >Mi perfil</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['ajustes']">Ajustes</a></li>
-                        <li><a class="dropdown-item" href="#">Panel Administrativo</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/ajustes']">Ajustes</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/panel']">Panel Administrativo</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

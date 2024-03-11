@@ -1,0 +1,25 @@
+<div class="">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let topic of topics">
+                <td class="td">{{topic.title | titlecase }}</td>
+                <td class="td">{{topic.date | date: "EEEE d, MMMM M, y":undefined:'es' | titlecase }}</td>
+                <td class="td">
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                            [routerLink]="['/panel/edit', topic._id]">Editar</a>
+                        <a class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                            (click)="onDelete(topic._id)">Eliminar</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

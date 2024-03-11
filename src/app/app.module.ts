@@ -11,6 +11,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AjustesComponent } from './components/ajustes/ajustes.component';
+import { PanelModule } from './panel/panel.module';
+import { TopicListComponent } from './components/topic-list/topic-list.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { AjustesComponent } from './components/ajustes/ajustes.component';
     LoginComponent,
     HomeComponent,
     PageNotFoundComponent,
-    AjustesComponent
+    AjustesComponent,
+    TopicListComponent
   ],
   imports: [
     BrowserModule,
+    PanelModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,

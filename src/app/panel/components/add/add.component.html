@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="fw-bold text-center">Crear tema</h1>
+
+    <p *ngIf="status == true" class="bg-success-subtle h-5 p-3">Topíc correctamente creado</p>
+    <p *ngIf="status == false" class="bg-danger-subtle h-5 p-3">Hubo un error al crear el topic</p>
+
+    <form class="row col-lg-10 mx-auto" [formGroup]="topicForm" (ngSubmit)="onSubmit()">
+        <fieldset class="form-group p-0 m-0 my-3">
+            <label class="form-label" for="title">Titulo</label>
+            <input class="form-control border border-2 rounded-2 border-black" formControlName="title" type="text" id="title">
+        </fieldset>
+        <fieldset class="form-group p-0 m-0 my-3">
+            <label class="form-label" for="content">Contenido</label>
+            <textarea id="content" class="form-control p-2 border border-2 rounded-2 border-black" formControlName="content" rows="2"></textarea>
+        </fieldset>
+        <fieldset class="form-group p-0 m-0 my-3">
+            <label class="form-label" for="code">Code</label>
+            <textarea id="code" class="form-control border p-2 border-2 rounded-2 border-black" formControlName="code" rows="2"></textarea>
+        </fieldset>
+        <fieldset class="form-group p-0 m-0 my-3">
+            <label class="form-label" for="lang">Lang</label>
+            <input class="form-control border border-2 rounded-2 border-black" formControlName="lang" type="text" id="lang">
+        </fieldset>
+        <button class="btn w-auto w-auto px-5 my-4 mx-auto btn-primary">Crear Tema</button>
+    </form>
+</div>

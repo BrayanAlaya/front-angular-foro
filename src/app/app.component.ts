@@ -21,14 +21,17 @@ export class AppComponent implements DoCheck, OnInit {
   }
 
   ngOnInit(): void {
-   
+
   }
 
   ngDoCheck(): void {
     this.token = this._userService.getToken()
     this.user = this._userService.getUser()
-    if (this.user.image) {
-      this.imageSrc = global.url + "avatar/" + this.user.image
+
+    if (this.user) {
+      if (this.user.image) {
+        this.imageSrc = global.url + "avatar/" + this.user.image 
+      }
     }
   }
 

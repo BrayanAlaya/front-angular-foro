@@ -1,0 +1,26 @@
+<h1 class="fw-bold text-center">Actualizar Tema</h1>
+
+<form class="row" [formGroup]="topicForm" (ngSubmit)="onSubmit()">
+    <fieldset class="p-0 m-0 form-group py-2">
+        <label class="form-label py-1" for="title">Titulo</label>
+        <input type="text" formControlName="title" class="form-control border border-2 rounded-2 border-black">
+    </fieldset>
+    
+    <fieldset class="p-0 m-0 form-group py-2">
+        <label class="form-label py-1" for="content">Contenido</label>
+        <textarea type="text" rows="3" formControlName="content" class="form-control border border-2 rounded-2 border-black"></textarea>
+    </fieldset>
+
+    <fieldset class="p-0 m-0 form-group py-2">
+        <label class="form-label py-1" for="code">Codigo</label>
+        <textarea type="text" rows="3" formControlName="code" class="form-control border border-2 rounded-2 border-black"></textarea>
+    </fieldset>
+    
+    <fieldset class="p-0 m-0 form-group py-2">
+        <label class="form-label py-1" for="lang">Lang</label>
+        <input type="text" formControlName="lang" class="form-control border border-2 rounded-2 border-black">
+    </fieldset>
+
+    <button class="btn btn-primary mt-4">Actualizar</button>
+
+</form>
