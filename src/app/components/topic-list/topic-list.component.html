@@ -1,1 +1,50 @@
-<p>topic-list works!</p>
+<div class="bg-temas">
+    <div class=" container">
+        <h1 class="text-center fw-bold my-3">Temas</h1>
+
+        <div class="topic-list">
+            <article *ngFor="let topic of topics" class="topic-list__content">
+                <div class="topic-list__userPost">
+                    <img class="img-mask-user-small" src="{{global.url}}/avatar/{{topic.user.image}}" alt="">
+                    <div class="">
+                        <p>{{topic.user.name}} {{topic.user.surname}}</p>
+                        <p class="topic-list__userPost-date">{{topic.date | date: "EEEE dd, MMMM MM, y":undefined:'es' | titlecase}}</p>
+                    </div>
+                </div>
+
+                <h4 class="topic-list__titulo">{{topic.title}}</h4>
+                <p class="topic-list__contenido">{{topic.content}}</p>
+                <p *ngIf="topic.lang" class="topic-list__lang">{{topic.lang}}</p>
+                <p *ngIf="topic.code" class="topic-list__code">{{topic.code}}</p>
+                <div class="topic-list__userComment">
+                    <div *ngIf="topic.comments.length > 0">
+                        <div *ngFor="let comment of topic.comments" class="topic-list__userComment-flex">
+                            <img class="img-mask-user-small" src="../../../assets/images/user-default.png" alt="">
+    
+                            <div  class="topic-list__userComment-comments">
+                                <div class="topic-list__userComment-comment">
+                                    <p class="topic-list__userComment-comment-user"></p>
+                                    <p class="topic-list__userComment-comment-content"></p>
+                                </div>
+                                <p class="topic-list__userComment-date"></p>
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                    <div class="topic-list__userComment-flex">
+                        <img class="img-mask-user-small" src="{{global.url}}/avatar/{{topic.user.image}}" alt="">
+                        
+                        <div class="topic-list__userComment-makeComment">
+                            <input type="text" [(ngModel)]="comment" placeholder="Ingresa un comentario">
+                            <button (click)="submitComment()"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </div>
+
+    </div>
+
+</div>

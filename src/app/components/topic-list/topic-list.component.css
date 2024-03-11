@@ -1,0 +1,124 @@
+.bg-temas {
+    background-color: rgb(243, 249, 255);
+}
+
+.topic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.topic-list__content {
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+
+    box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.82);
+    -webkit-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.82);
+    -moz-box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.82);
+
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        width: 60%;
+    }
+}
+
+.topic-list__userPost {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    background-color: rgb(0, 13, 77);
+    padding: 15px;
+
+    p {
+        font-size: 19px;
+        margin: 0;
+    }
+
+
+    .topic-list__userPost-date {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    img {
+        margin: 0;
+    }
+}
+
+.topic-list__titulo,
+.topic-list__lang {
+    font-weight: 600;
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.topic-list__contenido,
+.topic-list__code {
+    font-size: 18px;
+    padding: 10px;
+}
+.topic-list__userComment{
+    padding: 15px;
+    background-color: rgb(0, 13, 77);
+}
+.topic-list__userComment-flex {
+    padding: 15px 0;
+    display: flex;
+    gap: 10px;
+
+    img {
+        margin: 0;
+    }
+
+    .topic-list__userComment-comments {
+        .topic-list__userComment-comment {
+            padding: 10px 15px;
+            background-color: white;
+            border-radius: 5px;
+
+            p {
+                margin: 0;
+            }
+           
+            .topic-list__userComment-comment-user{
+                margin-bottom: 8px;
+                font-weight: 600;
+            }
+        }
+
+        .topic-list__userComment-date {
+            font-size: 15px;
+            margin-top: 7px;
+            margin-bottom: 0;
+            color: white;
+        }
+    }
+
+}
+
+.topic-list__userComment-makeComment{
+    display: flex;
+    height: 40px;
+    width: 100%;
+
+    input {
+        border-radius: 5px 0 0 5px;
+        width: 100%;
+        border: none;
+        padding: 10px;
+        height: 100%;
+        outline:none;
+    }
+    button{
+        border-radius: 0 5px 5px 0;
+        border: none;
+        height: 100%;
+        width: 50px;
+        font-size: 20px;
+        background-color: white;
+    }
+}

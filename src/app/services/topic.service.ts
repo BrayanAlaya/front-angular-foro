@@ -28,6 +28,10 @@ export class TopicService {
     return this._http.get(global.url + "topic/" + topicId)
   }
 
+  getTopicPage(page: any): Observable<any>{
+    return this._http.get(global.url + "topics/" + page)
+  }
+
   updateTopic(topicNew: Topic, topicId: any, token: any):Observable<any>{
     
     const header = new HttpHeaders().set("Authorization", token)

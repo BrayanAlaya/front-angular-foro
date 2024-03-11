@@ -61,6 +61,9 @@ export class AjustesComponent implements OnInit, DoCheck {
       this._userService.uploadImageUser(this.imageFilenew, this.token).subscribe({
         next: (response: any) => {
   
+          console.log(response);
+          
+
           if (response.code == 200) {
             this.userForm.controls["image"].setValue(response.image)
             this.updateUser()
@@ -86,7 +89,6 @@ export class AjustesComponent implements OnInit, DoCheck {
 
           localStorage.setItem("user", JSON.stringify(updateResponse.user))
           localStorage.setItem("token", updateResponse.token)
-
 
         } else{
           this.status = false
