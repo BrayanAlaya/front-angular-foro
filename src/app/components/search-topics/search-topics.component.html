@@ -47,41 +47,6 @@
 
             </article>
         </div>
-
-        <div class="pagination">
-
-            <div class="pagination-content">
-                <a class="pagination__page {{actualPage == 1 ? 'disabled' : ''}}"
-                    [routerLink]="['/temas', actualPage == 1 ? 1 : actualPage-1]"><i
-                        class="fa-solid fa-arrow-left"></i></a>
-                <a class="pagination__page {{actualPage == 1 ? 'selected' : ''}}" [routerLink]="['/temas']">1</a>
-
-                <a *ngIf="totalPages >= 7 && actualPage > 1 && actualPage < totalPagesArray[0]"
-                    class="pagination__page--point">...</a>
-                <a *ngIf="totalPages >= 7 && actualPage > 1 && actualPage < totalPagesArray[0]"
-                    class="pagination__page selected">{{actualPage}}</a>
-                <a *ngIf="totalPages >= 7" class="pagination__page--point">...</a>
-
-                <div *ngIf="totalPages > 2" class="pagination__pages-more">
-                    <a *ngFor="let page of totalPagesArray" [routerLink]="['/temas',page]"
-                        class="pagination__page {{actualPage == page ? 'selected' : ''}}">{{page}}</a>
-                </div>
-
-                <a *ngIf="totalPages >= 7" class="pagination__page--point">...</a>
-                <a *ngIf="totalPages >= 7 && actualPage > totalPagesArray[totalPagesArray.length-1] && actualPage < totalPages"
-                    class="pagination__page selected">{{actualPage}}</a>
-                <a *ngIf="totalPages >= 7 && actualPage > totalPagesArray[totalPagesArray.length-1] && actualPage < totalPages"
-                    class="pagination__page--point">...</a>
-
-                <a *ngIf="totalPages != 1" [routerLink]="['/temas',totalPages]"
-                    class="pagination__page {{actualPage == totalPages ? 'disabled selected' : ''}}">{{totalPages}}</a>
-                <a class="pagination__page {{actualPage == totalPages ? 'disabled' : ''}}"
-                    [routerLink]="['/temas', actualPage == totalPages ? totalPages : actualPage+1]"><i
-                        class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-        </div>
-
     </div>
 
 </div>

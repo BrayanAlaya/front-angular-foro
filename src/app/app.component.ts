@@ -1,6 +1,7 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
 import { global } from './services/global';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ export class AppComponent implements DoCheck, OnInit {
   public imageSrc: any;
 
   constructor(
-    private _userService: UserService
+    private _userService: UserService,
+    private _route: Router
   ) {
     this.token = _userService.getToken()
     this.user = _userService.getUser()
@@ -22,6 +24,12 @@ export class AppComponent implements DoCheck, OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  searchTopics(string: any): void {
+    if (string.length > 0) {
+      this._route.navigate(["/search/topic", string])
+    }
   }
 
   ngDoCheck(): void {

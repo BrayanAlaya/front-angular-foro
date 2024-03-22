@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AjustesComponent } from './components/ajustes/ajustes.component';
 import { PanelModule } from './panel/panel.module';
 import { TopicListComponent } from './components/topic-list/topic-list.component';
+import { SearchTopicsComponent } from './components/search-topics/search-topics.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TopicListComponent } from './components/topic-list/topic-list.component
     HomeComponent,
     PageNotFoundComponent,
     AjustesComponent,
-    TopicListComponent
+    TopicListComponent,
+    SearchTopicsComponent
   ],
   imports: [
     BrowserModule,

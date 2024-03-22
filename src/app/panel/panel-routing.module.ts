@@ -5,6 +5,7 @@ import { MainComponent } from './components/main/main.component';
 import { ListComponent } from './components/list/list.component';
 import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
+import { IsUserGuard } from '../guards/is-user.guard';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
       {path: "list", component: ListComponent},
       {path: "edit/:id", component: EditComponent},
       {path: "add", component: AddComponent}
-    ]
+    ],
+    canActivate: [IsUserGuard]
   }
 ];
 

@@ -46,5 +46,8 @@ export class TopicService {
     return this._http.delete(global.url + "topic/" + id, {headers: header})
   }
   
+  searchTopics(search: any): Observable<any>{
+    return this._http.get(global.url + "search/topic/" + search)
+  }
 
 }

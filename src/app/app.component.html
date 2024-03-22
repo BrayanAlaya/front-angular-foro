@@ -22,8 +22,8 @@
             </ul>
             
             <form class="d-flex col mx-lg-3 gap-3 " role="search">
-                <input class="form-control" type="search" placeholder="Buscar un tema" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                <input class="form-control" type="search" #searchInput placeholder="Buscar un tema" aria-label="Search">
+                <a class="btn btn-outline-primary" (click)="searchTopics(searchInput.value)" >Buscar</a>
             </form>
            
             <ul *ngIf="!user" class="navbar-nav mb-2 mb-lg-0">

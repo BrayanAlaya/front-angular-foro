@@ -60,10 +60,6 @@ export class AjustesComponent implements OnInit, DoCheck {
     if (this.imageFilenew) {
       this._userService.uploadImageUser(this.imageFilenew, this.token).subscribe({
         next: (response: any) => {
-  
-          console.log(response);
-          
-
           if (response.code == 200) {
             this.userForm.controls["image"].setValue(response.image)
             this.updateUser()
