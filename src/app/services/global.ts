@@ -1,4 +1,4 @@
 
 export const global = {
-    url: "http://localhost:2500/api/"
+    url: "https://api-rest-node-mongo-foro.onrender.com/api/"
 }
