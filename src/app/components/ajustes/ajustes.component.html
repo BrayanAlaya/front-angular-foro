@@ -4,21 +4,21 @@
     <p *ngIf="status == true" class="bg-success-subtle h-5 p-3">Informacion actualizada correctamente</p>
     <p *ngIf="status == false" class="bg-danger-subtle h-5 p-3">La informacion no se pudo actualizar</p>
 
-    <form class="" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-        <div class="">
+    <form class="row" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="d-flex">
 
             <div class="">
-                <fieldset class="">
+                <fieldset class="p-0 m-0 my-4 form-group">
                     <label class="" for="name">Nombre: </label>
                     <input type="text" class="form-control border border-2 border-black rounded-2" id="name"
                         formControlName="name">
                 </fieldset>
-                <fieldset class="">
+                <fieldset class="p-0 m-0 my-4 form-group">
                     <label class="my-2 form-label" for="surname">Apellido: </label>
                     <input type="text" class="form-control border border-2 border-black rounded-2" id="surname"
                         formControlName="surname">
                 </fieldset>
-                <fieldset class="">
+                <fieldset class="p-0 m-0 my-4 form-group">
                     <label class="my-2 form-label">Email: </label>
                     <input type="text" readonly formControlName="email" class="form-control-plaintext">
                 </fieldset>
