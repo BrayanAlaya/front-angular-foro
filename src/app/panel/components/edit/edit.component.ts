@@ -59,9 +59,9 @@ export class EditComponent implements OnInit {
   onSubmit(): void{
     this._topicService.updateTopic(this.topicForm.value, this.topicId, this.token).subscribe({
       next: (response: any) => {
-        
-        console.log(response);
-        
+        if (response.code == 200) {
+          
+        }
       }
     })
   }
