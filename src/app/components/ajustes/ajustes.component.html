@@ -5,9 +5,9 @@
     <p *ngIf="status == false" class="bg-danger-subtle h-5 p-3">La informacion no se pudo actualizar</p>
 
     <form class="row" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-        <div class="row w-100">
+        <div class="row">
 
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 <fieldset class="p-0 m-0 my-4 form-group">
                     <label class="" for="name">Nombre: </label>
                     <input type="text" class="form-control border border-2 border-black rounded-2" id="name"
@@ -28,7 +28,7 @@
                 </fieldset>
             </div>
 
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 <fieldset class="d-flex flex-column">
                     <label for="image">Imagen: </label>
                     <img class="mask-user-ajustes img-thumbnail" [src]="srcImage" alt="">

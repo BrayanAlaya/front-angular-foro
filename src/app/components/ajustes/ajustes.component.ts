@@ -66,7 +66,6 @@ export class AjustesComponent implements OnInit, DoCheck {
           } else {
             this.status = false
           }
-  
         }
       })
     } else{
