@@ -34,7 +34,7 @@
                     <img class="mask-user-ajustes img-thumbnail" [src]="srcImage" alt="">
                     <div class="my-3 row">
                         <label for="formFile" class="form-label">Ingresa una foto:</label>
-                        <input style="display: none;" class="form-control" #imageUserUploader type="file" (change)="uploadimage($event)">
+                        <input style="display: none;" class="form-control" accept="image/*" #imageUserUploader type="file"  (change)="uploadimage($event)">
                         <button class="btn btn-primary " type="button" (click)="imageUserUploader.click()">Sube una imagen</button>
                     </div>
                 </fieldset>
